@@ -39,7 +39,7 @@
 		B0E3623B1E5C8476002EE66B /* AddAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddAssembly.swift; path = AdditionModule/Assembly/AddAssembly.swift; sourceTree = "<group>"; };
 		B0E3623D1E5D9452002EE66B /* AddViewModelsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddViewModelsConfigurator.swift; path = AdditionModule/Presenter/AddViewModelsConfigurator.swift; sourceTree = "<group>"; };
 		B0E3623F1E5D9589002EE66B /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddViewController.swift; path = AdditionModule/View/AddViewController.swift; sourceTree = "<group>"; };
-		B0E362411E5D964A002EE66B /* EmployeeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeService.swift; path = ListModule/Interactor/EmployeeService.swift; sourceTree = "<group>"; };
+		B0E362411E5D964A002EE66B /* EmployeeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeService.swift; path = Services/EmployeeService/EmployeeService.swift; sourceTree = "<group>"; };
 		B0E362431E5D96DB002EE66B /* ListModelsConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListModelsConverter.swift; path = ListModule/Presenter/ListModelsConverter.swift; sourceTree = "<group>"; };
 		B0E362451E5D9AEB002EE66B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B0F530B01E5C3FC70084065F /* ListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListRouter.swift; path = ListModule/Router/ListRouter.swift; sourceTree = "<group>"; };
@@ -59,6 +59,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B025C86B1E63FDFA004C8660 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B025C86C1E63FE04004C8660 /* EmployeeService */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		B025C86C1E63FE04004C8660 /* EmployeeService */ = {
+			isa = PBXGroup;
+			children = (
+				B0E362411E5D964A002EE66B /* EmployeeService.swift */,
+			);
+			name = EmployeeService;
+			sourceTree = "<group>";
+		};
 		B0A8072F1E5C30190026BE89 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +95,7 @@
 		B0A8073A1E5C30190026BE89 /* EmployeeList */ = {
 			isa = PBXGroup;
 			children = (
+				B025C86B1E63FDFA004C8660 /* Services */,
 				B0F530B71E5C6AEA0084065F /* AdditionModule */,
 				B0F530B61E5C6AD70084065F /* ListModule */,
 				B0A8073B1E5C30190026BE89 /* AppDelegate.swift */,
@@ -110,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				B0F530B21E5C40420084065F /* ListInteractor.swift */,
-				B0E362411E5D964A002EE66B /* EmployeeService.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";

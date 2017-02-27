@@ -15,8 +15,7 @@ struct AddViewModel {
 }
 
 class AddViewModelsConfigurator {
-    weak var addPresenter: AddPresenter!
-    
+    private weak var addPresenter: AddPresenter!
     private var viewModels: [AddViewModel]!
     private var currentModelIndex: Int
     

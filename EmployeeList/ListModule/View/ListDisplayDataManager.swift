@@ -13,7 +13,7 @@ struct CellModel {
     let company: String
 }
 
-class ListDisplayDataManager:NSObject, UITableViewDelegate, UITableViewDataSource {
+class ListDataDisplayManager:NSObject, UITableViewDelegate, UITableViewDataSource {
     var cellModels: [CellModel] = []
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

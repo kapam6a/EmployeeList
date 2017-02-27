@@ -40,7 +40,7 @@ class ListPresenter: ListViewOutput, ListInteractorOutput, ListModuleInput {
         view.updateStateWithModels(cellModels)
     }
     
-    func interactorDidCompleteEmployeeListRequestWithError(_ error: Error) {
+    func interactorDidFailObtainingEmployeeList(_ error: Error) {
         view.updateFailureStateWithError(error.localizedDescription)
     }
     

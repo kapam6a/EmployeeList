@@ -38,7 +38,9 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     
     @objc private func didEditingChanged(_ textField: UITextField) {
         if let block = didChangeText {
-            block(textField.text!)
+            if let text = textField.text {
+                block(text)
+            }
         }
     }
     

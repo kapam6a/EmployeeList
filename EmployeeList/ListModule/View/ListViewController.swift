@@ -20,10 +20,28 @@ protocol ListViewInput: class {
 
 class ListViewController: UIViewController, ListViewInput {
     var output: ListViewOutput!
-    var displayDataManager: ListDisplayDataManager!
+    var dataDisplayManager: ListDataDisplayManager!
     
-    private var tableView: UITableView!
-    private var alertController: UIAlertController!
+    private let tableView: UITableView
+    private let alertController: UIAlertController
+    
+    init() {
+        tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.delegate = dataDisplayManager
+        tableView.dataSource = dataDisplayManager
+        
+        alertController = UIAlertController(title: "Error",
+                                            message: nil,
+                                            preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "OK",
+                                                style: UIAlertActionStyle.default,
+                                                handler: nil))
+       super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,11 +50,6 @@ class ListViewController: UIViewController, ListViewInput {
                                         action: #selector(didTapAddButton(_:)))
         navigationItem.rightBarButtonItem = addButton
         
-        alertController = createAlertConroller()
-        
-        tableView = UITableView(frame: .zero, style: .grouped)
-        tableView.delegate = displayDataManager
-        tableView.dataSource = displayDataManager
         view.addSubview(tableView)
         
     }
@@ -54,7 +67,7 @@ class ListViewController: UIViewController, ListViewInput {
     //MARK: ViewInput
 
     func updateStateWithModels(_ cellModels: [CellModel]) {
-        displayDataManager.cellModels = cellModels
+        dataDisplayManager.cellModels = cellModels
         tableView.reloadData()
     }
     
@@ -66,18 +79,6 @@ class ListViewController: UIViewController, ListViewInput {
     
     @objc private func didTapAddButton(_ sender: UIBarButtonItem) {
         output.viewDidTapAddButton()
-    }
-    
-    //MARK: Helpers
-    
-    private func createAlertConroller() -> UIAlertController {
-        let alertController = UIAlertController(title: "Error",
-                                                message: nil,
-                                                preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "OK",
-                                                style: UIAlertActionStyle.default,
-                                                handler: nil))
-        return alertController
     }
 }
 

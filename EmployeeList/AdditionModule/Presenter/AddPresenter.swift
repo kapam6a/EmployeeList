@@ -53,3 +53,4 @@ class AddPresenter: AddViewOutput {
         newEmployee.company = company
     }
 }
+

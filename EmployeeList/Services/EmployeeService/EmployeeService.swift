@@ -18,7 +18,7 @@ protocol EmployeeService {
     func addEmployeeToList(_ employee: EmployeeEntity)
 }
 
-class ConcreteEmployeeService: EmployeeService{
+class EmployeeServiceImplementation: EmployeeService{
     private var employeeList = [EmployeeEntity(name: "Jenya", company: "Rambler"),
                                 EmployeeEntity(name: "Vanya", company: "Tinkoff"),
                                 EmployeeEntity(name: "Kolya", company: "Sberbank")]

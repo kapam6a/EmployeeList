@@ -15,15 +15,15 @@ protocol ListInteractorInput {
 
 protocol ListInteractorOutput: class {
     func interactorDidGetEmployeeList(_ employeeList: [EmployeeEntity])
-    func interactorDidCompleteEmployeeListRequestWithError(_ error: Error)
+    func interactorDidFailObtainingEmployeeList(_ error: Error)
 }
 
 class ListInteractor: ListInteractorInput {
-    weak var output: ListInteractorOutput!
+    weak var output: ListInteractorOutput?
     
     private let employeeService: EmployeeService
     
-    init(_ employeeService: EmployeeService) {
+    init(employeeService: EmployeeService) {
         self.employeeService = employeeService
     }
     
@@ -32,9 +32,13 @@ class ListInteractor: ListInteractorInput {
     func requestEmployeeList() {
         employeeService.requestEmployeeList { (employeeList, error) in
             if let employeeList = employeeList {
-                output.interactorDidGetEmployeeList(employeeList)
+                if let listInteractorOutput = output{
+                    listInteractorOutput.interactorDidGetEmployeeList(employeeList)
+                }
             } else if let error = error {
-                output.interactorDidCompleteEmployeeListRequestWithError(error)
+                if let listInteractorOutput = output{
+                    listInteractorOutput.interactorDidFailObtainingEmployeeList(error)
+                }
             }
         }
     }

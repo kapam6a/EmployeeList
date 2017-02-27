@@ -13,7 +13,7 @@ class ListAssembly {
         let viewController = ListViewController()
         let displayDataManager = ListDisplayDataManager()
         let presenter = ListPresenter()
-        let interactor = ListInteractor.init(ConcreteEmployeeService())
+        let interactor = ListInteractor(employeeService: EmployeeServiceImplementation())
         let router = ListRouter()
         
         viewController.output = presenter
