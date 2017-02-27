@@ -8,16 +8,16 @@
 
 import Foundation
 
-protocol AddInteractorInput {
+protocol AddStoryInteractorInput {
     func addNewEmployee(_ employee: EmployeeEntity)
 }
 
-protocol AddInteractorOutput: class {
+protocol AddStoryInteractorOutput: class {
     
 }
 
-class AddInteractor: AddInteractorInput {
-    weak var output: AddInteractorOutput?
+class AddStoryInteractor: AddStoryInteractorInput {
+    weak var output: AddStoryInteractorOutput?
     
     private let employeeService: EmployeeService
     

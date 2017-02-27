@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B04BDC891E642C6C00E1717F /* AddStoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04BDC881E642C6C00E1717F /* AddStoryRouter.swift */; };
+		B04BDC911E64343B00E1717F /* AddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04BDC901E64343B00E1717F /* AddPresenter.swift */; };
+		B04BDC931E64357C00E1717F /* AddAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04BDC921E64357C00E1717F /* AddAssembly.swift */; };
+		B04BDC951E64547600E1717F /* AddStoryConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04BDC941E64547600E1717F /* AddStoryConfigurator.swift */; };
 		B0A8073C1E5C30190026BE89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A8073B1E5C30190026BE89 /* AppDelegate.swift */; };
 		B0A8073E1E5C30190026BE89 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A8073D1E5C30190026BE89 /* ListViewController.swift */; };
 		B0A807431E5C30190026BE89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0A807421E5C30190026BE89 /* Assets.xcassets */; };
 		B0A807541E5C34160026BE89 /* ListDisplayDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A807531E5C34160026BE89 /* ListDisplayDataManager.swift */; };
 		B0A807561E5C3A750026BE89 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A807551E5C3A750026BE89 /* ListPresenter.swift */; };
-		B0E362381E5C8102002EE66B /* AddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E362371E5C8102002EE66B /* AddPresenter.swift */; };
-		B0E3623A1E5C81A3002EE66B /* AddInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E362391E5C81A3002EE66B /* AddInteractor.swift */; };
-		B0E3623C1E5C8476002EE66B /* AddAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E3623B1E5C8476002EE66B /* AddAssembly.swift */; };
-		B0E3623E1E5D9452002EE66B /* AddViewModelsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E3623D1E5D9452002EE66B /* AddViewModelsConfigurator.swift */; };
+		B0E362381E5C8102002EE66B /* AddStoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E362371E5C8102002EE66B /* AddStoryPresenter.swift */; };
+		B0E3623A1E5C81A3002EE66B /* AddStoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E362391E5C81A3002EE66B /* AddStoryInteractor.swift */; };
+		B0E3623C1E5C8476002EE66B /* AddStoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E3623B1E5C8476002EE66B /* AddStoryAssembly.swift */; };
 		B0E362401E5D9589002EE66B /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E3623F1E5D9589002EE66B /* AddViewController.swift */; };
 		B0E362421E5D964A002EE66B /* EmployeeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E362411E5D964A002EE66B /* EmployeeService.swift */; };
 		B0E362441E5D96DB002EE66B /* ListModelsConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E362431E5D96DB002EE66B /* ListModelsConverter.swift */; };
@@ -27,6 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B04BDC881E642C6C00E1717F /* AddStoryRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddStoryRouter.swift; path = AdditionModule/Router/AddStoryRouter.swift; sourceTree = "<group>"; };
+		B04BDC901E64343B00E1717F /* AddPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPresenter.swift; path = AddModule/Presenter/AddPresenter.swift; sourceTree = "<group>"; };
+		B04BDC921E64357C00E1717F /* AddAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddAssembly.swift; path = AddModule/Assembly/AddAssembly.swift; sourceTree = "<group>"; };
+		B04BDC941E64547600E1717F /* AddStoryConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddStoryConfigurator.swift; path = AdditionModule/Presenter/AddStoryConfigurator.swift; sourceTree = "<group>"; };
 		B0A807381E5C30190026BE89 /* EmployeeList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmployeeList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A8073B1E5C30190026BE89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0A8073D1E5C30190026BE89 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = ListModule/View/ListViewController.swift; sourceTree = "<group>"; };
@@ -34,10 +41,9 @@
 		B0A807471E5C30190026BE89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0A807531E5C34160026BE89 /* ListDisplayDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListDisplayDataManager.swift; path = ListModule/View/ListDisplayDataManager.swift; sourceTree = "<group>"; };
 		B0A807551E5C3A750026BE89 /* ListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListPresenter.swift; path = ListModule/Presenter/ListPresenter.swift; sourceTree = "<group>"; };
-		B0E362371E5C8102002EE66B /* AddPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPresenter.swift; path = AdditionModule/Presenter/AddPresenter.swift; sourceTree = "<group>"; };
-		B0E362391E5C81A3002EE66B /* AddInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddInteractor.swift; path = AdditionModule/Interactor/AddInteractor.swift; sourceTree = "<group>"; };
-		B0E3623B1E5C8476002EE66B /* AddAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddAssembly.swift; path = AdditionModule/Assembly/AddAssembly.swift; sourceTree = "<group>"; };
-		B0E3623D1E5D9452002EE66B /* AddViewModelsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddViewModelsConfigurator.swift; path = AdditionModule/Presenter/AddViewModelsConfigurator.swift; sourceTree = "<group>"; };
+		B0E362371E5C8102002EE66B /* AddStoryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddStoryPresenter.swift; path = AdditionModule/Presenter/AddStoryPresenter.swift; sourceTree = "<group>"; };
+		B0E362391E5C81A3002EE66B /* AddStoryInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddStoryInteractor.swift; path = AdditionModule/Interactor/AddStoryInteractor.swift; sourceTree = "<group>"; };
+		B0E3623B1E5C8476002EE66B /* AddStoryAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddStoryAssembly.swift; path = AdditionModule/Assembly/AddStoryAssembly.swift; sourceTree = "<group>"; };
 		B0E3623F1E5D9589002EE66B /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddViewController.swift; path = AdditionModule/View/AddViewController.swift; sourceTree = "<group>"; };
 		B0E362411E5D964A002EE66B /* EmployeeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeService.swift; path = Services/EmployeeService/EmployeeService.swift; sourceTree = "<group>"; };
 		B0E362431E5D96DB002EE66B /* ListModelsConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListModelsConverter.swift; path = ListModule/Presenter/ListModelsConverter.swift; sourceTree = "<group>"; };
@@ -75,6 +81,64 @@
 			name = EmployeeService;
 			sourceTree = "<group>";
 		};
+		B04BDC871E642C5100E1717F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B04BDC881E642C6C00E1717F /* AddStoryRouter.swift */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		B04BDC8A1E64330600E1717F /* AddModule */ = {
+			isa = PBXGroup;
+			children = (
+				B04BDC8F1E6433FA00E1717F /* Assembly */,
+				B04BDC8E1E64334000E1717F /* Router */,
+				B04BDC8D1E64333900E1717F /* Interactor */,
+				B04BDC8C1E64333300E1717F /* Presenter */,
+				B04BDC8B1E64332F00E1717F /* View */,
+			);
+			name = AddModule;
+			sourceTree = "<group>";
+		};
+		B04BDC8B1E64332F00E1717F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B0E3623F1E5D9589002EE66B /* AddViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B04BDC8C1E64333300E1717F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B04BDC901E64343B00E1717F /* AddPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		B04BDC8D1E64333900E1717F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		B04BDC8E1E64334000E1717F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		B04BDC8F1E6433FA00E1717F /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				B04BDC921E64357C00E1717F /* AddAssembly.swift */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
 		B0A8072F1E5C30190026BE89 = {
 			isa = PBXGroup;
 			children = (
@@ -96,7 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				B025C86B1E63FDFA004C8660 /* Services */,
-				B0F530B71E5C6AEA0084065F /* AdditionModule */,
+				B04BDC8A1E64330600E1717F /* AddModule */,
+				B0F530B71E5C6AEA0084065F /* AddStoryModule */,
 				B0F530B61E5C6AD70084065F /* ListModule */,
 				B0A8073B1E5C30190026BE89 /* AppDelegate.swift */,
 				B0A807421E5C30190026BE89 /* Assets.xcassets */,
@@ -159,22 +224,22 @@
 			name = ListModule;
 			sourceTree = "<group>";
 		};
-		B0F530B71E5C6AEA0084065F /* AdditionModule */ = {
+		B0F530B71E5C6AEA0084065F /* AddStoryModule */ = {
 			isa = PBXGroup;
 			children = (
 				B0F530BB1E5C6B460084065F /* Assembly */,
+				B04BDC871E642C5100E1717F /* Router */,
 				B0F530BA1E5C6B3F0084065F /* Interactor */,
 				B0F530B91E5C6B370084065F /* Presenter */,
 				B0F530B81E5C6B310084065F /* View */,
 			);
-			name = AdditionModule;
+			name = AddStoryModule;
 			sourceTree = "<group>";
 		};
 		B0F530B81E5C6B310084065F /* View */ = {
 			isa = PBXGroup;
 			children = (
 				B0F530BC1E5C6BEF0084065F /* AdditionNavigationController.swift */,
-				B0E3623F1E5D9589002EE66B /* AddViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -182,8 +247,8 @@
 		B0F530B91E5C6B370084065F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				B0E362371E5C8102002EE66B /* AddPresenter.swift */,
-				B0E3623D1E5D9452002EE66B /* AddViewModelsConfigurator.swift */,
+				B04BDC941E64547600E1717F /* AddStoryConfigurator.swift */,
+				B0E362371E5C8102002EE66B /* AddStoryPresenter.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -191,7 +256,7 @@
 		B0F530BA1E5C6B3F0084065F /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				B0E362391E5C81A3002EE66B /* AddInteractor.swift */,
+				B0E362391E5C81A3002EE66B /* AddStoryInteractor.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -199,7 +264,7 @@
 		B0F530BB1E5C6B460084065F /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				B0E3623B1E5C8476002EE66B /* AddAssembly.swift */,
+				B0E3623B1E5C8476002EE66B /* AddStoryAssembly.swift */,
 			);
 			name = Assembly;
 			sourceTree = "<group>";
@@ -275,20 +340,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0E3623C1E5C8476002EE66B /* AddAssembly.swift in Sources */,
+				B0E3623C1E5C8476002EE66B /* AddStoryAssembly.swift in Sources */,
 				B0A807541E5C34160026BE89 /* ListDisplayDataManager.swift in Sources */,
 				B0F530B31E5C40420084065F /* ListInteractor.swift in Sources */,
 				B0A807561E5C3A750026BE89 /* ListPresenter.swift in Sources */,
-				B0E362381E5C8102002EE66B /* AddPresenter.swift in Sources */,
+				B04BDC891E642C6C00E1717F /* AddStoryRouter.swift in Sources */,
+				B0E362381E5C8102002EE66B /* AddStoryPresenter.swift in Sources */,
+				B04BDC951E64547600E1717F /* AddStoryConfigurator.swift in Sources */,
 				B0F530BD1E5C6BEF0084065F /* AdditionNavigationController.swift in Sources */,
 				B0F530B51E5C444C0084065F /* ListAssembly.swift in Sources */,
+				B04BDC911E64343B00E1717F /* AddPresenter.swift in Sources */,
+				B04BDC931E64357C00E1717F /* AddAssembly.swift in Sources */,
 				B0F530B11E5C3FC70084065F /* ListRouter.swift in Sources */,
 				B0A8073E1E5C30190026BE89 /* ListViewController.swift in Sources */,
 				B0E362421E5D964A002EE66B /* EmployeeService.swift in Sources */,
 				B0E362441E5D96DB002EE66B /* ListModelsConverter.swift in Sources */,
-				B0E3623E1E5D9452002EE66B /* AddViewModelsConfigurator.swift in Sources */,
 				B0E362401E5D9589002EE66B /* AddViewController.swift in Sources */,
-				B0E3623A1E5C81A3002EE66B /* AddInteractor.swift in Sources */,
+				B0E3623A1E5C81A3002EE66B /* AddStoryInteractor.swift in Sources */,
 				B0A8073C1E5C30190026BE89 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

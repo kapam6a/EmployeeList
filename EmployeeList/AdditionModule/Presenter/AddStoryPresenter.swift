@@ -13,43 +13,41 @@ struct AddNewEmployee {
     var company: String
 }
 
-class AddPresenter: AddViewOutput, AddInteractorOutput {
-    weak var view: AddViewInput!
-    var interactor: AddInteractorInput!
+class AddStoryPresenter: AddStoryViewOutput, AddStoryInteractorOutput {
+    weak var view: AddStoryViewInput!
+    var interactor: AddStoryInteractorInput!
+    var router: AddStoryRouterInput!
     
     private var newEmployee: AddNewEmployee
-    private var configurator: AddViewModelsConfigurator!
+    private var configurator: AddStoryConfigurator!
     
     init() {
         newEmployee = AddNewEmployee(name: "", company: "")
-        configurator = AddViewModelsConfigurator(with: self)
+        configurator = AddStoryConfigurator(with: self)
     }
     
     //MARK : AddViewOutput
     
     func viewDidLoadView() {
-        if configurator.hasNextViewModel() {
-            view.updateWithModel(configurator.nextViewModel())
-        }
+        router.openNextModule(with: configurator.nameModuleConfiguratoration())
     }
     
-    func viewDidTapNextButton() {
-        if configurator.hasNextViewModel() {
-            view.updateWithModel(configurator.nextViewModel())
-        }
+    func didTapNameModuleNextButton() {
+        router.openNextModule(with: configurator.companyModuleConfiguratoration())
     }
     
-    func viewDidTapSaveButton() {
+    func didTapSaveButton() {
         let employee = EmployeeEntity(name: newEmployee.name,
                                       company: newEmployee.company)
         interactor.addNewEmployee(employee)
+        router.closeModule()
     }
     
-    func viewDidChangeName(_ name: String) {
+    func didChangeName(_ name: String) {
         newEmployee.name = name
     }
     
-    func viewDidChangeCompany(_ company: String) {
+    func didChangeCompany(_ company: String) {
         newEmployee.company = company
     }
 }

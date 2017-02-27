@@ -16,7 +16,7 @@ class ListRouter: ListRouterInput {
     weak var viewController: UIViewController!
     
     func openAddModule() {
-        let newViewController = AddAssembly().createAddModule()
+        let newViewController = AddStoryAssembly().createAddStoryModule()
         
         viewController.present(newViewController, animated: true, completion: nil)
     }
