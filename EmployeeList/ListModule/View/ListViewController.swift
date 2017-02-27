@@ -20,12 +20,14 @@ protocol ListViewInput: class {
 
 class ListViewController: UIViewController, ListViewInput {
     var output: ListViewOutput!
-    var dataDisplayManager: ListDataDisplayManager!
     
     private let tableView: UITableView
     private let alertController: UIAlertController
-    
+    private let dataDisplayManager: ListDataDisplayManager!
+
     init() {
+        dataDisplayManager = ListDataDisplayManager()
+
         tableView = UITableView(frame: .zero, style: .grouped)
         tableView.delegate = dataDisplayManager
         tableView.dataSource = dataDisplayManager
@@ -36,7 +38,8 @@ class ListViewController: UIViewController, ListViewInput {
         alertController.addAction(UIAlertAction(title: "OK",
                                                 style: UIAlertActionStyle.default,
                                                 handler: nil))
-       super.init(nibName: nil, bundle: nil)
+        
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {

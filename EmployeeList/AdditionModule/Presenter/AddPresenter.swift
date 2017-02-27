@@ -13,9 +13,9 @@ struct AddNewEmployee {
     var company: String
 }
 
-class AddPresenter: AddViewOutput {
+class AddPresenter: AddViewOutput, AddInteractorOutput {
     weak var view: AddViewInput!
-    weak var listModuleInput: ListModuleInput!
+    var interactor: AddInteractorInput!
     
     private var newEmployee: AddNewEmployee
     private var configurator: AddViewModelsConfigurator!
@@ -29,20 +29,20 @@ class AddPresenter: AddViewOutput {
     
     func viewDidLoadView() {
         if configurator.hasNextViewModel() {
-            view.updateWitModel(configurator.nextViewModel())
+            view.updateWithModel(configurator.nextViewModel())
         }
     }
     
     func viewDidTapNextButton() {
         if configurator.hasNextViewModel() {
-            view.updateWitModel(configurator.nextViewModel())
+            view.updateWithModel(configurator.nextViewModel())
         }
     }
     
     func viewDidTapSaveButton() {
         let employee = EmployeeEntity(name: newEmployee.name,
                                       company: newEmployee.company)
-        listModuleInput.listModuleDidAddNewEmployee(employee)
+        interactor.addNewEmployee(employee)
     }
     
     func viewDidChangeName(_ name: String) {

@@ -9,14 +9,14 @@
 import UIKit
 
 protocol ListRouterInput {
-    func openAdditionModule(with listModuleInput: ListModuleInput)
+    func openAddModule()
 }
 
 class ListRouter: ListRouterInput {
     weak var viewController: UIViewController!
     
-    func openAdditionModule(with listModuleInput: ListModuleInput) {
-        let newViewController = AddAssembly().createAddModule(with: listModuleInput)
+    func openAddModule() {
+        let newViewController = AddAssembly().createAddModule()
         
         viewController.present(newViewController, animated: true, completion: nil)
     }

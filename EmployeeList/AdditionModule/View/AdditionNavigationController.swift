@@ -17,7 +17,7 @@ protocol AddViewOutput: class {
 }
 
 protocol AddViewInput: class {
-    func updateWitModel(_ viewModel: AddViewModel)
+    func updateWithModel(_ viewModel: AddViewModel)
 }
 
 class AddNavigationController: UINavigationController, AddViewInput {
@@ -35,7 +35,7 @@ class AddNavigationController: UINavigationController, AddViewInput {
     
     //MARK : AddViewInput
     
-    func updateWitModel(_ viewModel: AddViewModel) {
+    func updateWithModel(_ viewModel: AddViewModel) {
         let newViewController = viewControllerWithModel(viewModel)
         pushViewController(newViewController, animated: true)
     }

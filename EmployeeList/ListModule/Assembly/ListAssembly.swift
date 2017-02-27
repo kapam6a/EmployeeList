@@ -11,13 +11,11 @@ import UIKit
 class ListAssembly {
     func createEmployeeListModule() -> UIViewController  {
         let viewController = ListViewController()
-        let displayDataManager = ListDisplayDataManager()
         let presenter = ListPresenter()
-        let interactor = ListInteractor(employeeService: EmployeeServiceImplementation())
+        let interactor = ListInteractor(employeeService: EmployeeServiceImplementation.sharedInstance)
         let router = ListRouter()
         
         viewController.output = presenter
-        viewController.displayDataManager = displayDataManager
 
         presenter.view = viewController
         presenter.interactor = interactor

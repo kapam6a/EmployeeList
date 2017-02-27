@@ -30,7 +30,7 @@ class ListPresenter: ListViewOutput, ListInteractorOutput, ListModuleInput {
     }
     
     func viewDidTapAddButton() {
-        router.openAdditionModule(with: self)
+        router.openAddModule()
     }
     
     //MARK : InteractorOutput

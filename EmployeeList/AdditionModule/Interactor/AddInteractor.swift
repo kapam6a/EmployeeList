@@ -7,3 +7,27 @@
 //
 
 import Foundation
+
+protocol AddInteractorInput {
+    func addNewEmployee(_ employee: EmployeeEntity)
+}
+
+protocol AddInteractorOutput: class {
+    
+}
+
+class AddInteractor: AddInteractorInput {
+    weak var output: AddInteractorOutput?
+    
+    private let employeeService: EmployeeService
+    
+    init(employeeService: EmployeeService) {
+        self.employeeService = employeeService
+    }
+    
+    //MARK : ListInteractorInput
+        
+    func addNewEmployee(_ employee: EmployeeEntity) {
+        employeeService.addEmployeeToList(employee)
+    }
+}

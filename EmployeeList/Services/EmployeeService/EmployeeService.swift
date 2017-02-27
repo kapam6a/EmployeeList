@@ -23,6 +23,8 @@ class EmployeeServiceImplementation: EmployeeService{
                                 EmployeeEntity(name: "Vanya", company: "Tinkoff"),
                                 EmployeeEntity(name: "Kolya", company: "Sberbank")]
     
+    static let sharedInstance = EmployeeServiceImplementation()
+    
     func requestEmployeeList(_ completionHandler : ([EmployeeEntity]?, Error?) -> Void) {
         completionHandler(employeeList, nil)
     }

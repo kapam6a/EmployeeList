@@ -9,14 +9,17 @@
 import UIKit
 
 class AddAssembly {
-    func createAddModule(with listModuleInput: ListModuleInput) -> UIViewController  {
+    func createAddModule() -> UIViewController  {
         let navController = AddNavigationController()
         let presenter = AddPresenter()
+        let interactor = AddInteractor(employeeService: EmployeeServiceImplementation.sharedInstance)
         
         navController.output = presenter
         
         presenter.view = navController
-        presenter.listModuleInput = listModuleInput
+        presenter.interactor = interactor
+        
+        interactor.output = presenter
 
         return navController
     }
